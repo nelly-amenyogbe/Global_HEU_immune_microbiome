@@ -1,0 +1,33 @@
+---
+title: "ms_HEU_package_versions"
+author: "Nelly Amenyogbe"
+date: "7/16/2020"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+---
+
+```{r, message = FALSE}
+# packages used for HEU_manusript analysis
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(phyloseq)
+library(DESeq2)
+library(missForest)
+library(reshape2)
+library(mixOmics)
+library(cowplot)
+library(vegan)
+library(devtools)
+library(ggbiplot)
+library(cowplot)
+```
+
+
+
+```{r}
+# now get the versions of all packages used
+sessionInfo()
+```
