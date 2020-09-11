@@ -12,10 +12,10 @@ library(dplyr)
 library(reshape2)
 
 # helper function
-source("Scripts/functions/function_diablo_error.R")
+source("HEU_manuscript_analysis/scripts/functions/function_diablo_error.R")
 
 # load data
-group.cols <- read.csv("Rdata/luminex/heu_pca_colours.csv") # for graphing aesthetics
+group.cols <- read.csv("HEU_manuscript_analysis/Rdata/luminex/heu_pca_colours.csv") # for graphing aesthetics
 
 # DIABLO results
 blg.int <- readRDS("HEU_manuscript_analysis/Rdata/R_export/blg_sgccda_res.rds")

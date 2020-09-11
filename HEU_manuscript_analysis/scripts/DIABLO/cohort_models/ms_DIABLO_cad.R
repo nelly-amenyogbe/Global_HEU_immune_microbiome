@@ -49,7 +49,7 @@ tune.cad.0 <- tune.block.splsda(X = dat,
                                 dist = "max.dist")
 
 #choice.keepx.0 <- tune.cad.0$choice.keepX # this varies slightly.  Here we select the number passed to the final analysis.
-choice.keepx.0 <- list("otu" = c(5, 5), "lmx" = c(12, 30))
+choice.keepx.0 <- list("otu" = c(5, 5), "lmx" = c(25, 18))
 
 res.final <- block.splsda(X = dat,
                       Y = Y,
