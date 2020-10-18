@@ -42,7 +42,7 @@ lmx$subject.bead <- paste(lmx$Sample, lmx$Bead.Name)
 lmx <- ddply(lmx, .(subject.bead), transform, unstim.value = final.concentration[Stim == "Unstim"])
 
 # Add metadata ####
-meta <- meta[,c("SUBJECT_ID", "SEX", "GEST_AGE", "BIRTH_WT", "DELIVERY", "MOM_AGE", "WAZ", "WLZ", "LAZ", "art.ga", "recruit.day")]
+meta <- meta[,c("SUBJECT_ID", "SEX", "GEST_AGE", "BIRTH_WT", "DELIVERY", "MOM_AGE", "WAZ", "WLZ", "HAZ", "art.ga", "recruit.day")]
 
 colnames(meta)[1] <- "Sample"
 
