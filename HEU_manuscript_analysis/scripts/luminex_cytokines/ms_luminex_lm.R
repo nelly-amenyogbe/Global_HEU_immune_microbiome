@@ -419,14 +419,14 @@ cad.res.wlz.us <- ldply(as.list(cad.vars[9:11]), function(i){
 
 cad.res.wlz.us$p.value[cad.res.wlz.us$variable == "GroupHEU"] # all significant after adjusting
 
-# CAD results adjusted for LAZ ####
+# CAD results adjusted for HAZ ####
 
 # stimulated values
-cad.res.laz <- ldply(as.list(cad.vars[1:8]), function(i){
+cad.res.haz <- ldply(as.list(cad.vars[1:8]), function(i){
   
   d <- filter(cad.dat, stim.cyto == i)
   
-  fit <- lm(log10(final.concentration) ~ Group + LAZ + log10(unstim.value), data = d)
+  fit <- lm(log10(final.concentration) ~ Group + HAZ + log10(unstim.value), data = d)
   x <- summary(fit) # get results
   r2 <- x$r.squared
   
@@ -448,14 +448,14 @@ cad.res.laz <- ldply(as.list(cad.vars[1:8]), function(i){
   
 })
 
-cad.res.laz$p.value[cad.res.laz$variable == "GroupHEU"] # all significant after adjusting
+cad.res.haz$p.value[cad.res.haz$variable == "GroupHEU"] # all significant after adjusting
 
 # stimulated values
-cad.res.laz.us <- ldply(as.list(cad.vars[9:11]), function(i){
+cad.res.haz.us <- ldply(as.list(cad.vars[9:11]), function(i){
   
   d <- filter(cad.dat, stim.cyto == i)
   
-  fit <- lm(log10(final.concentration) ~ Group + LAZ + recruit.day, data = d)
+  fit <- lm(log10(final.concentration) ~ Group + HAZ + recruit.day, data = d)
   x <- summary(fit) # get results
   r2 <- x$r.squared
   
@@ -477,6 +477,6 @@ cad.res.laz.us <- ldply(as.list(cad.vars[9:11]), function(i){
   
 }) 
 
-cad.res.laz.us$p.value[cad.res.laz.us$variable == "GroupHEU"] # all significant after adjusting
+cad.res.haz.us$p.value[cad.res.haz.us$variable == "GroupHEU"] # all significant after adjusting
 
 # conclude: demographic host factors do not account for the differences between HEU and HUU children in this study
